@@ -14,6 +14,6 @@ def format(message):
         outmsg['dest'] = outmsg['dest_ip']
         del outmsg['dest_ip']
 
-    timestamp = datetime.datetime.isoformat(datetime.datetime.utcnow())
+    timestamp = datetime.datetime.isoformat(datetime.datetime.now())
     msg = u', '.join([u'{}="{}"'.format(name, unicode(value).replace('"', '\\"')) for name, value in outmsg.items() if value])
     return timestamp + u' ' + msg
