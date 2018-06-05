@@ -24,7 +24,7 @@ def format(message):
         "informational": "1"
     }
     severity = severity_map.get(tmpmsg.get('severity'), "1")
-    timestamp = datetime.datetime.isoformat(datetime.datetime.utcnow())
+    timestamp = datetime.datetime.isoformat(datetime.datetime.now())
 
     # Set dynamic variables
     outmsg = u"{} CEF:0|ThreatStream|MHN|1.0|{}|{}|{}|".format(timestamp, message['type'], message['signature'], severity)
